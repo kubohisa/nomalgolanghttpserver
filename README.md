@@ -5,3 +5,9 @@ net/httpを使った基本的なgolangの簡易httpサーバーです。Javascri
 hoge> go run server.go
 
 で実行できます
+
+hoge> go build server.go
+
+
+
+で、server.exeも生成でき。golangなしでも実行できます
