@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 )
 
@@ -16,5 +17,5 @@ func main() {
 
 	fmt.Print("Listening.")
 	
-	server.ListenAndServe()
+	log.Fatal(server.ListenAndServe())
 }
