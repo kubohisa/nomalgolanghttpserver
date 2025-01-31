@@ -11,7 +11,7 @@ func main() {
 
 	server := http.Server{
 		Addr:    "localhost:8000",
-		Handler: fs,
+		Handler: nil,
 	}
 
 	fmt.Print("Listening.")
