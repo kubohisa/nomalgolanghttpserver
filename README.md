@@ -2,6 +2,6 @@
 
 net/httpを使った基本的なgolangの簡易httpサーバーです。Javascriptのプログラムの動作チェックで使いたくて実装しました
 
-hoge> golang run server.go
+hoge> go run server.go
 
 で実行できます
