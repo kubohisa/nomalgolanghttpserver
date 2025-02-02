@@ -15,7 +15,7 @@ func main() {
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
 	defer stop()
 
-	fs := http.FileServer(http.Dir("./public/"))
+	fs := http.FileServer(http.Dir("./web/"))
 	http.Handle("/", fs)
 
 	server := http.Server{
