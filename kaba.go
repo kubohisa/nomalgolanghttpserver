@@ -12,6 +12,9 @@ import (
 )
 
 func main() {
+	
+	var port string = "8000"
+	
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
 	defer stop()
 
@@ -19,7 +22,7 @@ func main() {
 	http.Handle("/", fs)
 
 	server := http.Server{
-		Addr:    "localhost:8000",
+		Addr:    "localhost:" + port,
 		Handler: addHeader(fs),
 	}
 
@@ -31,9 +34,8 @@ func main() {
 	}()
 
 	fmt.Print("Kaba Server.\r\n")
-	fmt.Print("kubohisa. Poppyright 2025\r\n")
-	fmt.Print("----\r\n")
-	fmt.Print("Listening.\r\n\r\n")
+	fmt.Print("Poppyright 2025 kubohisa.\r\n\r\n")
+	fmt.Print("Listening: http://localhost:" + port + "/\r\n\r\n")
 
 	log.Fatal(server.ListenAndServe())
 }
